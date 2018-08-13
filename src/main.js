@@ -7,9 +7,14 @@ import iview from 'iview'
 import 'iview/dist/styles/iview.css'
 import '../src/assets/css/common.css'
 // import 'reset-css'
+
 Vue.use(iview)
 Vue.config.productionTip = false
+import {GET,POST} from './util/http'
 
+Vue.prototype.$get = GET;
+// Vue.prototype.axios = axios
+// axios.defaults.baseURL = '/api'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

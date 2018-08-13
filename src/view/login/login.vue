@@ -44,7 +44,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
   import '@/mock/user/user.js'
     export default {
         name: "login",
@@ -70,7 +69,7 @@
         login () {
             var scope = this
           scope.loading = true;
-          axios.post('/user')
+          scope.$get('/user')
             .then(function (res) {
              const resd = res.data;
              if(resd.suc) {
